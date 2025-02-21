@@ -2,20 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Regular.woff2') format('woff2'),
+       url('/fonts/Gotham-Regular.woff') format('woff'),
+       url('/fonts/Gotham-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* color: var(--foreground);
+  background: var(--background); */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gotham', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
